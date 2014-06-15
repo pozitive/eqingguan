@@ -1307,6 +1307,22 @@ $topbar-link-padding: $topbar-height / 3;
 .bg.blogs {
     background: image-url("slides/bg.jpg") no-repeat fixed center center / cover rgba(0, 0, 0, 0);
 }
+.bottom {
+    .panel {
+	background: rgba(50, 50, 50, 0.9);
+	border: none;
+	margin: 25px 0;
+    }
+    .quote {
+	border: none;
+	padding: 25px 0;
+	color: #fff;
+	h2, p {
+	    color: #fff;
+	}
+    }
+
+}
 .footer {
     padding: 50px 0;
     border-top: 1px solid #C9C9C9;

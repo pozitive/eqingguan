@@ -18,6 +18,7 @@
         .row 
           .small-12.columns
             = yield
+      = content_for?(:bottom) ? yield(:bottom) : render("layouts/bottom")
       = render "layouts/footer"
     = render "layouts/analytics"
 
