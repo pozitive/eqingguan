@@ -1,0 +1,16 @@
+%header
+  %h1 博客列表
+  %hr
+
+- @blogs.each do |blog|
+  %h3= link_to blog.name, blog_path(blog)
+  %p= markdown(truncate(blog.content, length: 200))
+  %p.small= blog.updated_at
+  - if user_signed_in?
+    .manage
+      = link_to 'Show', blog, class: "button success tiny"
+      = link_to 'Edit', edit_blog_path(blog), class: "button tiny" 
+      = link_to 'Destroy', blog, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "button tiny alert"  
+
+
+= link_to 'New Blog', new_blog_path, class: "button success" if user_signed_in?

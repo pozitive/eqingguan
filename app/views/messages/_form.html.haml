@@ -1,0 +1,20 @@
+= form_for @message do |f|
+  - if @message.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@message.errors.count, "error")} prohibited this message from being saved:"
+      %ul
+        - @message.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :name, '姓名'
+    = f.text_field :name, {required: '', placeholder: '姓名'}
+  .field
+    = f.label :email, '电子邮件'
+    = f.text_field :email, {required: '', placeholder: "yourname@example.biz"}
+  .field
+    = f.label :phone, '电话'
+    = f.text_field :phone, {placeholder: "18688883692"}
+  .field
+    = f.text_area :note, {required: '', placeholder: "你的留言"}
+  .actions
+    = f.submit 'Send', class: 'button success radius'
