@@ -6,8 +6,6 @@
 %h1= @blog.name
 = markdown(@blog.content)
 
-= social_share_button_tag(@blog.name)
-
 - if user_signed_in?
   = link_to 'Edit', edit_blog_path(@blog)
   \|

@@ -12,12 +12,13 @@
     = csrf_meta_tags
   %body
     = render "layouts/topbar"
-    = yield(:top)
-    %main.main{class: controller_name}
-      .row 
-        .small-12.columns
-          = yield
-    = render "layouts/footer"
+    .bg{class: controller_name}
+      = content_for?(:top) ? yield(:top) : render("layouts/top")
+      %main.main{class: controller_name}
+        .row 
+          .small-12.columns
+            = yield
+      = render "layouts/footer"
     = render "layouts/analytics"
 
     = javascript_include_tag "application", "data-turbolinks-track" => true

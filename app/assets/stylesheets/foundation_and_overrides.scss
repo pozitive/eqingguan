@@ -1243,8 +1243,6 @@ $topbar-link-padding: $topbar-height / 3;
 
 @import 'foundation';
 #topbar {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #C9C9C9;    
 }
 .hero {
 }
@@ -1299,11 +1297,18 @@ $topbar-link-padding: $topbar-height / 3;
     border-bottom: 1px solid #C9C9C9;
     padding: 50px 0;
 }
+.secondary-hero {
+    height: 200px;
+}
 .main {
     padding: 50px 0;
+    background: #fff;
 }
-
+.bg.blogs {
+    background: image-url("slides/bg.jpg") no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+}
 .footer {
     padding: 50px 0;
     border-top: 1px solid #C9C9C9;
+    background: #fff;
 }
