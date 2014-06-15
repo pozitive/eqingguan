@@ -37,16 +37,16 @@
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-// $row-width: rem-calc(1000);
+$row-width: rem-calc(960);
 // $column-gutter: rem-calc(30);
 // $total-columns: 12;
 
 // We use these to control various global styles
-// $body-bg: #fff;
-// $body-font-color: #222;
+$body-bg: #fff;
+$body-font-color: #222;
 $body-font-family: Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
-// $body-font-weight: normal;
-// $body-font-style: normal;
+$body-font-weight: normal;
+$body-font-style: normal;
 
 // We use this to control font-smoothing
 // $font-smoothing: antialiased;
@@ -57,12 +57,12 @@ $body-font-family: Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细�
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+$primary-color: #008CBA;
+$secondary-color: #e7e7e7;
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -1132,40 +1132,40 @@ $body-font-family: Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细�
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: #fff;
+$topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
-// $topbar-margin-bottom: 0;
+$topbar-height: 45px;
+$topbar-margin-bottom: 5px;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: normal;
-// $topbar-title-font-size: rem-calc(17);
+$topbar-title-font-size: rem-calc(25);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
-// $topbar-dropdown-link-color: #fff;
-// $topbar-dropdown-link-bg: #333;
+$topbar-dropdown-bg: #fff;
+$topbar-dropdown-link-color: #333;
+$topbar-dropdown-link-bg: #fff;
 // $topbar-dropdown-link-weight: normal;
 // $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-color: #333;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
-// $topbar-link-color-hover: #fff;
-// $topbar-link-color-active: #fff;
-// $topbar-link-color-active-hover: #fff;
-// $topbar-link-weight: normal;
-// $topbar-link-font-size: rem-calc(13);
+$topbar-link-color: #333;
+$topbar-link-color-hover: #333;
+$topbar-link-color-active: #008CBA;
+$topbar-link-color-active-hover: #008CBA;
+$topbar-link-weight: normal;
+$topbar-link-font-size: rem-calc(17);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-// $topbar-link-bg-hover: #272727;
-// $topbar-link-bg-active: $primary-color;
-// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
-// $topbar-link-font-family: $body-font-family;
-// $topbar-link-text-transform: none;
-// $topbar-link-padding: $topbar-height / 3;
+$topbar-link-bg-hover: #fff;
+$topbar-link-bg-active: #fff;
+$topbar-link-bg-active-hover: #fff;
+$topbar-link-font-family: $body-font-family;
+$topbar-link-text-transform: none;
+$topbar-link-padding: $topbar-height / 3;
 
 // $topbar-button-font-size: 0.75rem;
 // $topbar-button-top: 7px;
@@ -1242,3 +1242,68 @@ $body-font-family: Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细�
 // $range-slider-handle-cursor: pointer;
 
 @import 'foundation';
+#topbar {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #C9C9C9;    
+}
+.hero {
+}
+.promo{
+    padding: 50px 0;
+    p {
+	color: #9C9899;
+    }
+}
+.green-color {
+    color: #70A300;
+}
+.red-color {
+    color: #E47C00;
+}
+.yellow-color {
+    color: #ECC800;
+}
+.grey {
+    color: #9C9899;
+}
+.quote {
+    border-bottom: 1px solid #C9C9C9;
+    border-top: 1px solid #C9C9C9;
+    padding: 50px 0;
+    .circle {
+	text-align: center;
+	vertical-align: middle;
+	background: #D74B33;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	&:hover {
+	    background: #000;
+	}
+	a {
+	    color: #fff;
+	}
+	i {
+	    font-size: 50px;
+	    line-height: 100px;
+	}
+    }
+    h2 {
+	letter-spacing: 3px;
+    }
+    h2, p {
+	color: #5E5A59;
+    }
+}
+.thumb {
+    border-bottom: 1px solid #C9C9C9;
+    padding: 50px 0;
+}
+.main {
+    padding: 50px 0;
+}
+
+.footer {
+    padding: 50px 0;
+    border-top: 1px solid #C9C9C9;
+}

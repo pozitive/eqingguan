@@ -12,14 +12,11 @@
     = csrf_meta_tags
   %body
     = render "layouts/topbar"
-    = content_for?(:hero) ? yield(:hero) : render("layouts/hero")
-    %main{class: controller_name}
+    = yield(:top)
+    %main.main{class: controller_name}
       .row 
-        .small-12.medium-3.columns
-          = content_for?(:navbar) ? yield(:navbar) : render("layouts/navbar")
-        .small-12.medium-9.columns
+        .small-12.columns
           = yield
-    = content_for?(:bottom) ? yield(:bottom) : render("layouts/bottom")
     = render "layouts/footer"
     = render "layouts/analytics"
 
