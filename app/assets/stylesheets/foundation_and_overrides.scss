@@ -1,3 +1,5 @@
+@import "foundation/functions";
+@import 'foundation-icons';
 // Foundation by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
@@ -42,7 +44,7 @@
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -1239,4 +1241,4 @@
 // $range-slider-handle-bg-hover-color: scale-color($primary-color, $lightness: -12%);
 // $range-slider-handle-cursor: pointer;
 
-// @import 'foundation';
+@import 'foundation';
