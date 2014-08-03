@@ -1,9 +1,10 @@
+# -*- coding: utf-8 -*-
 Zhaiwuzhuitao::Application.routes.draw do
 
   resources :messages
 
   devise_for :users
-  resources :blogs
+  resources :blogs, path: "内容"
 
   get "/pages/*id" => 'pages#show', as: :page, format: false
   root to: 'pages#show', id: 'home'

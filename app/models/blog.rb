@@ -3,4 +3,6 @@ class Blog < ActiveRecord::Base
   friendly_id :name
   validates_presence_of :name, :content
   validates :name, uniqueness: true
+
+  has_ancestry
 end

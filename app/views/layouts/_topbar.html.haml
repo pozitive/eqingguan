@@ -8,5 +8,14 @@
       / Right Nav Section
       %ul.right
         %li.active= link_to "首页", root_path
-        - Blog.order("weight asc").all.each do |blog|
-          %li= link_to blog.name, blog_path(blog)
+        -# - Blog.order("weight asc").all.each do |blog|
+        -#   %li= link_to blog.name, blog_path(blog)
+        - Blog.order(weight: :asc).roots.each do |blog|
+          - if blog.children.present?
+            %li{class: "has-dropdown"}
+              = link_to blog.name, "#", class: "has-dropdown"
+              %ul{class: "dropdown"}
+                - blog.children.order(weight: :asc).each do |children|
+                  %li= link_to children.name, children
+          - else
+            %li= link_to blog.name, blog_path(blog)
