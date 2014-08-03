@@ -8,6 +8,7 @@ Zhaiwuzhuitao::Application.routes.draw do
 
   get "/pages/*id" => 'pages#show', as: :page, format: false
   root to: 'pages#show', id: 'home'
+  get "sitemap" => "sitemaps#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
