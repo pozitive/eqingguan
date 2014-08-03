@@ -2,11 +2,14 @@
   .thumb
     .row
       .columns.small-12.medium-4
-        %h2 公路运输
-        %p= image_tag "thumb/car.jpg", class: "th"
+        = link_to Blog.find_by_name("俄罗斯货运") do
+          %h2 公路运输
+          %p= image_tag "thumb/car.jpg", class: "th"
       .columns.small-12.medium-4
-        %h2 空中运输
-        %p= image_tag "thumb/airplane.jpg", class: "th"
+        = link_to Blog.find_by_name("俄罗斯空运") do
+          %h2 空中运输
+          %p= image_tag "thumb/airplane.jpg", class: "th"
       .columns.small-12.medium-4
-        %h2 水上运输
-        %p= image_tag "thumb/boat.jpg", class: "th"
+        = link_to Blog.find_by_name("俄罗斯海运") do
+          %h2 水上运输
+          %p= image_tag "thumb/boat.jpg", class: "th"
